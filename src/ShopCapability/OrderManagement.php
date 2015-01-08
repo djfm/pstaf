@@ -39,7 +39,7 @@ class OrderManagement extends ShopCapability
     {
         $invoice_link = $this->getInvoiceLink();
 
-        return $this->getBrowser()->curl($invoice_link);
+        return $this->getBrowser()->xhr($invoice_link);
     }
 
     public function getInvoiceFromJSON()
