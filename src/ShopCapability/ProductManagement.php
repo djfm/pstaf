@@ -63,7 +63,9 @@ class ProductManagement extends ShopCapability
             $m = [];
             if (preg_match('/^\s*(\d+(?:\.\d+)?)\s*%\s*(?:starting\s+at\s+unit\s+(\d+))?$/', $options['specific_price'], $m)) {
                 $percentage = $m[1];
-                $from_quantity = $m[2];
+                if (isset($m[2])) {
+                    $from_quantity = $m[2];
+                }
             } else {
                 throw new \Exception("Invalid specific price specified: {$options['specific_price']}.");
             }
