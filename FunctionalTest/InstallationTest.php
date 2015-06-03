@@ -38,7 +38,12 @@ class InstallationTest extends TestCase
             ['bn', 'bd'], ['bn', 'id'],
             ['tw', 'tw'], ['tw', 'us'],
             ['zh', 'cn'], ['zh', 'us'],
-            ['he', 'il'], ['he', 'fr']
+            ['he', 'il'], ['he', 'fr'],
+            ['bg', 'bg'], ['bg', 'fr'],
+            ['hr', 'hr'], ['hr', 'fr'],
+            ['lt', 'lt'], ['lt', 'fr'],
+            ['si', 'si'], ['si', 'fr'],
+            ['sv', 'se'], ['sv', 'fr']
         ];
     }
 
