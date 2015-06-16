@@ -21,24 +21,24 @@ class ShopInstallation extends ShopCapability
         ->checkbox('#set_license', true)
         ->click('#btNext')
         ->fillIn('#infosShop', $options['shop_name']);
-        
+
         if (isset($options['main_activity'])) {
             $browser->jqcSelect('#infosActivity', $options['main_activity']);
         }
-        
+
         $browser->jqcSelect('#infosCountry', $options['country']);
 
         if (isset($options['timezone'])) {
             $browser->jqcSelect('#infosTimezone', $options['timezone']);
         }
-        
+
         $browser
         ->fillIn('#infosFirstname', $options['admin_firstname'])
         ->fillIn('#infosName', $options['admin_lastname'])
         ->fillIn('#infosEmail', $options['admin_email'])
         ->fillIn('#infosPassword', $options['admin_password'])
         ->fillIn('#infosPasswordRepeat', $options['admin_password'])
-        ->checkbox('#infosNotification', $options['newsletter'])
+        // ->checkbox('#infosNotification', $options['newsletter'])
         ->click('#btNext')
         ->fillIn('#dbServer', $this->getShop()->getMysqlHost().':'.$this->getShop()->getMysqlPort())
         ->fillIn('#dbName', $this->getShop()->getMysqlDatabase())
